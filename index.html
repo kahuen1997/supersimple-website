@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nissan BR Architects</title>
+    <script src="training.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="jquery.js"></script>
+    <link rel="stylesheet" href="java.css">
+    <link rel="stylesheet" href="frame.css">
+    <link rel="shortcut icon" href="Photo_1/nissan-brand-logo-1200x938-1594842787.jpg" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/156c0859e7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="navbar">
+    <ul class="navbar-ul" >
+        <li class="navbar-li" id="BRHeader1" ><a id="BRHeader" href="http://"target="_blank"><b>BR Architects</b></a></li>
+        <li class="navbar-li-right"><a href="http://" target="_blank">Project</a></li>
+        <li class="navbar-li-right"><a href="http://">About</a></li>
+        <li class="navbar-li-right"><a id="Con-drop" href="http://">Contact</a>
+            <div class="hiddenboard-contact">
+                <a href="http://">R32</a>
+                <a href="http://">R33</a>
+                <a href="http://">R34</a>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="hiddenboard">
+    <h1>THE R34 SKYLINE GT-R</h1>
+    <p>
+    The R34 Skyline GT-R was introduced in 1998, and was available from 1998 to 2002. A technologically advanced display unit set the model apart, while it’s RB26DETT twin-turbo I6  engine produced impressive horsepower. The shorter wheelbase and more streamlined body of the R34 helped it to achieve even higher performance than its predecessors.
+    After first appearing to the motoring world as a prototype at the Tokyo Motor Show in 1993, the R33 Skyline GT-R was finally launched to the public in January 1995 again with the famed RB26DETT.
+    In its evolution from the R32, the R33 Skyline GT-R became a faster, more stable car, thanks to highly improved body stiffness, better weight distribution and optimized traction control provided by the new all-wheel drive system called “ATTESA E-TS PRO”.
+    </p>
+</div>
+
+
+
+<div class="headerimg">
+    <div class="headerimg-content">
+        <span>BR</span> Architects
+    </div>
+    <div class="boxbox">
+    </div>
+</div>
+
+<!-- <div class="form">
+    <form action="">
+        <label for="fname" class="fo" id="p">What is your fav Car?</label><br>
+        <input type="text" id="input-fname" class="fo" value="R34" maxlength="10" size="10">
+    </form>
+</div> -->
+
+<div class="y">
+    <a href="#BRHeader1"><i id="icon" class="fa-solid fa-circle-xmark" style="color: #cb259e; float: right; padding: 10px;"></i></a>
+    <div class="textcenter">
+        無需要太多
+    </div>
+</div>
+
+
+
+<style>
+    .headerimg-content-bigger{
+        font-size: 60px;
+        transition: 3s;
+    }
+
+    .headerimg-content-smaller{
+        font-size: 50px;
+        transition: 3s;
+    }
+    
+</style>
+
+<script>
+    $(function () {
+        $(".headerimg-content").hover(function () {
+                // over
+                $(this).toggleClass("headerimg-content-bigger");
+            }, function () {
+                // out
+                $(this).toggleClass("headerimg-content-smaller");
+            }
+        );
+    });
+
+
+    $(function () {
+        $("#BRHeader").hover(function (e) { 
+            $(".hiddenboard").fadeToggle(2000);
+        });
+    });
+
+
+
+    $(function () {
+        $(".headerimg-content").click(function (e) { 
+            let x = $(this).text() + "<br>" + $(this).html(); 
+            console.log(x);
+        });
+    });
+    
+    $(function () {
+        $("#BRHeader").hover(function (e) { 
+            $(this).attr("href", "https://www.nissanusa.com/experience-nissan/news-and-events/evolution-from-skyline-to-gt-r.html");
+        });
+    });
+
+    $(function () {
+        $("#BRHeader").hover(function (e) { 
+            let x = "The link will be: " + $(this).attr("href");
+            console.log(x);
+        });
+    });
+    
+    $(document).ready(function () {
+       $("#icon").click(function (e) { 
+        $(".y").hide();
+        
+       }); 
+    });
+
+    $(function () {
+        $("#olo").dblclick(function (e) { 
+            let x = "The Width" + $(this).outerWidth() + "<br>" + "The Height:" + $(this).outerHeight();
+            document.getElementById("lol").innerHTML = x;
+            
+        });
+    });
+
+
+
+    $(function () {
+        $("#input-fname").blur(function (e) { 
+            $(this).css("background-color", "yellow").css("width", "250px");
+            
+        });
+    });
+
+
+</script>
+
+
+
+
+</body>
+</html>
